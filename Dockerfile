@@ -19,7 +19,7 @@ COPY --from=builder /app/public ./public
 COPY --from=builder /app/package*.json ./
 COPY --from=builder /app/drizzle.config.ts ./
 
-RUN npm ci --omit=dev && npm cache clean --force
+RUN npm ci && npm cache clean --force
 
 RUN addgroup -g 1001 -S nodejs && \
     adduser -S sabq -u 1001
