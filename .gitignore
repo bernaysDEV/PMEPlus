@@ -49,3 +49,4 @@ coverage/
 
 # TypeScript
 *.tsbuildinfo
+!attached_assets/*.png
