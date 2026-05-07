@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <!-- Suppress third-party script errors in development -->
+    <script data-cfasync="false">
+      (function() {
+        var origin = location.origin;
+        window.addEventListener('error', function(e) {
+          var src = e.filename || '';
+          var msg = e.message || '';
+          var isExternal = !src || src.indexOf(origin) === -1 ||
+              src.indexOf('googletagmanager') !== -1;
+          if (isExternal) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return false;
+          }
+          if (msg.indexOf('scroll-fade-in') !== -1) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return false;
+          }
+        }, true);
+        window.addEventListener('unhandledrejection', function(e) {
+          if (e.reason && typeof e.reason === 'object' && !e.reason.stack) {
+            e.stopImmediatePropagation();
+            e.preventDefault();
+            return false;
+          }
+        }, true);
+      })();
+    </script>
+    
+    <!-- Google Analytics GA4 - Deferred for performance -->
+    <script data-cfasync="false">
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-EEB5593GY7', {
+        send_page_view: true,
+        cookie_flags: 'SameSite=None;Secure'
+      });
+      setTimeout(function() {
+        var s = document.createElement('script');
+        s.src = 'https://www.googletagmanager.com/gtag/js?id=G-EEB5593GY7';
+        s.async = true;
+        document.head.appendChild(s);
+      }, 5000);
+    </script>
+    
+    <!-- DEFERRED: Load GTM script on user interaction or after 5s -->
+    <script data-cfasync="false">
+      (function() {
+        var loaded = false;
+        function loadGtmScript() {
+          if (loaded) return;
+          loaded = true;
+          var evts = ['scroll','click','touchstart','mousemove','keydown'];
+          evts.forEach(function(e){ document.removeEventListener(e, loadGtmScript, {capture:true}); });
+          (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-T5PW84LM');
+        }
+        var evts = ['scroll','click','touchstart','mousemove','keydown'];
+        evts.forEach(function(e){ document.addEventListener(e, loadGtmScript, {capture:true,once:true,passive:true}); });
+        setTimeout(loadGtmScript, 5000);
+      })();
+    </script>
+    <!-- Disable Cloudflare Rocket Loader for this page (rocket-loader=off) -->
+    <meta http-equiv="x-dns-prefetch-control" content="on">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes, viewport-fit=cover" />
+    <meta name="title" content="Property Middle East - بروبرتي ميدل إيست - المنصة الأولى لأخبار العقار في الشرق الأوسط" />
+    <meta name="description" content="بروبرتي ميدل إيست هي المنصة الرائدة لأخبار العقارات في منطقة الشرق الأوسط. نحن نلتزم بأعلى المعايير لتقديم تغطية شاملة لسوق العقارات المتغير في المنطقة، مع تحليلات متخصصة وقصص فريدة تعزز فهمك لهذا القطاع المثير." />
+    <meta name="keywords" content="Real estate, Saudi Arabia, Bahrain, Kuwait, Qatar, Oman, Middle East, Property, Auctions, عقارات، المملكة العربية السعودية، مملكة البحرين، الكويت، قطر، عمان، الشرق الأوسط، العقار، القطاع العقاري، المزادات العقارية، الإنشاءات، أخبار العقار" />
+    <meta name="theme-color" content="#31325A" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico?v=pme1" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png?v=pme1" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png?v=pme1" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/icon-192.png?v=pme1" />
+    <link rel="icon" type="image/png" sizes="512x512" href="/icon-512.png?v=pme1" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=pme1" />
+    
+    <!--
+      Brand identifiers below use the official Property ME domain / handles
+      (propertyme.com, @propertyme on social) per the rebrand from project
+      task #25. The legacy sabq.org host is kept alive at the CDN layer with
+      a 301 redirect during the transition — see
+      docs/BRAND_IDENTIFIER_MIGRATION.md. Server-side SEO injection
+      (server/seoInjector.ts) overrides these tags at SSR time using the
+      centralized constants in shared/branding.ts.
+    -->
+
+    <!-- Organization Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "NewsMediaOrganization",
+      "name": "بروبرتي ميدل إيست",
+      "alternateName": "Property Middle East",
+      "url": "https://propertymiddleeast.com",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://propertymiddleeast.com/branding/property-me-og-image.png",
+        "width": 1200,
+        "height": 630
+      },
+      "sameAs": [
+        "https://x.com/PropertyMENA",
+        "https://www.facebook.com/propertymiddleeast",
+        "https://www.instagram.com/propertymiddleeast",
+        "https://youtube.com/@propertymiddleeast",
+        "https://www.linkedin.com/company/propertymiddleeast"
+      ],
+      "description": "بروبرتي ميدل إيست هي المنصة الرائدة لأخبار العقارات في منطقة الشرق الأوسط. نحن نلتزم بأعلى المعايير لتقديم تغطية شاملة لسوق العقارات المتغير في المنطقة، مع تحليلات متخصصة وقصص فريدة تعزز فهمك لهذا القطاع المثير.",
+      "areaServed": [
+        { "@type": "Country", "name": "المملكة العربية السعودية" },
+        { "@type": "Country", "name": "الإمارات العربية المتحدة" },
+        { "@type": "Country", "name": "مملكة البحرين" },
+        { "@type": "Country", "name": "الكويت" },
+        { "@type": "Country", "name": "قطر" },
+        { "@type": "Country", "name": "سلطنة عمان" }
+      ],
+      "publishingPrinciples": "https://propertymiddleeast.com/about"
+    }
+    </script>
+    
+    <!-- WebSite Schema with SearchAction -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "بروبرتي ميدل إيست - Property Middle East",
+      "url": "https://propertymiddleeast.com",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://propertymiddleeast.com/search?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://propertymiddleeast.com" />
+    <meta property="og:title" content="Property Middle East - بروبرتي ميدل إيست - المنصة الأولى لأخبار العقار في الشرق الأوسط" />
+    <meta property="og:description" content="بروبرتي ميدل إيست هي المنصة الرائدة لأخبار العقارات في منطقة الشرق الأوسط. نحن نلتزم بأعلى المعايير لتقديم تغطية شاملة لسوق العقارات المتغير في المنطقة، مع تحليلات متخصصة وقصص فريدة تعزز فهمك لهذا القطاع المثير." />
+    <meta property="og:image" content="https://propertymiddleeast.com/branding/property-me-og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Property Middle East" />
+    <meta property="og:site_name" content="بروبرتي ميدل إيست - Property Middle East" />
+    <meta property="og:locale" content="ar_SA" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@PropertyMENA" />
+    <meta name="twitter:url" content="https://propertymiddleeast.com" />
+    <meta name="twitter:title" content="Property Middle East - بروبرتي ميدل إيست - المنصة الأولى لأخبار العقار في الشرق الأوسط" />
+    <meta name="twitter:description" content="بروبرتي ميدل إيست هي المنصة الرائدة لأخبار العقارات في منطقة الشرق الأوسط. نحن نلتزم بأعلى المعايير لتقديم تغطية شاملة لسوق العقارات المتغير في المنطقة، مع تحليلات متخصصة وقصص فريدة تعزز فهمك لهذا القطاع المثير." />
+    <meta property="twitter:image" content="https://propertymiddleeast.com/branding/property-me-og-image.png" />
+    <meta property="twitter:image:alt" content="Property Middle East" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="بروبرتي ميدل إيست" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <title>Property Middle East - بروبرتي ميدل إيست - المنصة الأولى لأخبار العقار في الشرق الأوسط</title>
+    <!-- Preconnect for critical resources (fonts and storage) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://imagedelivery.net" crossorigin>
+    
+    <!-- Load fonts with display=swap for faster text rendering (deferred to avoid render-blocking) -->
+    <link id="google-fonts" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" media="print">
+    <script data-cfasync="false">
+      // Switch font stylesheet to 'all' after load (CSP-compliant replacement for inline onload)
+      (function() {
+        var link = document.getElementById('google-fonts');
+        if (link) {
+          if (link.sheet) { link.media = 'all'; }
+          else { link.addEventListener('load', function() { link.media = 'all'; }); }
+        }
+      })();
+    </script>
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Tajawal:wght@400;500;700&family=Inter:wght@400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    </noscript>
+  </head>
+  <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T5PW84LM"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    <div id="root">
+      <style>
+        .instant-loader {
+          min-height: 100vh;
+          background: #ffffff;
+          display: flex;
+          flex-direction: column;
+          direction: rtl;
+        }
+        @media (prefers-color-scheme: dark) {
+          .instant-loader { background: #0a0a0a; }
+          .instant-loader .skeleton { background: #1a1a1a; }
+        }
+        .instant-loader .header {
+          height: 64px;
+          border-bottom: 1px solid #e5e5e5;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0 24px;
+        }
+        @media (prefers-color-scheme: dark) {
+          .instant-loader .header { border-color: #262626; }
+        }
+        .instant-loader .nav {
+          height: 48px;
+          border-bottom: 1px solid #e5e5e5;
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          padding: 0 24px;
+        }
+        @media (prefers-color-scheme: dark) {
+          .instant-loader .nav { border-color: #262626; }
+        }
+        .instant-loader .skeleton {
+          background: #f3f4f6;
+          border-radius: 8px;
+          animation: pulse 1.5s ease-in-out infinite;
+        }
+        .instant-loader .hero {
+          max-width: 1280px;
+          margin: 32px auto;
+          padding: 0 24px;
+          width: 100%;
+        }
+        .instant-loader .hero-skeleton {
+          height: 400px;
+          width: 100%;
+        }
+        @keyframes pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0.5; }
+        }
+      </style>
+      <div class="instant-loader">
+        <div class="header">
+          <div class="skeleton" style="width: 120px; height: 40px;"></div>
+          <div class="skeleton" style="width: 200px; height: 36px;"></div>
+          <div class="skeleton" style="width: 80px; height: 36px;"></div>
+        </div>
+        <div class="nav">
+          <div class="skeleton" style="width: 60px; height: 24px;"></div>
+          <div class="skeleton" style="width: 80px; height: 24px;"></div>
+          <div class="skeleton" style="width: 70px; height: 24px;"></div>
+          <div class="skeleton" style="width: 90px; height: 24px;"></div>
+        </div>
+        <div class="hero">
+          <div class="skeleton hero-skeleton"></div>
+        </div>
+      </div>
+    </div>
+    <!-- Main app script - MUST NOT be modified by Cloudflare Rocket Loader -->
+    <script data-cfasync="false" type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "usJLwx72Hj6lkfEfI7YAq"
+uri = "file://.local/tasks/sabq-ios-native-prompt.md"
+type = "text"
+title = "برومبت شامل: تحويل سبق الذكية إلى تطبيق iOS أصلي"
+
+[[outputs]]
+id = "wWvwasqsdHQDjllnoaSqR"
+uri = "file://docs/gulf-live-guide.md"
+type = "text"
+title = "دليل تغطية البث الحي — للزملاء"
+
+[[outputs]]
+id = "lkft6cKc9LTIt-HomJwFT"
+uri = "file://تقرير_الأداء_المعماري_سبق.md"
+type = "text"
+title = "تقرير الأداء المعماري — صحيفة سبق"
+
+[[outputs]]
+id = "Kqral1fAcHwAoaMT5zXzm"
+uri = "file://sabq-dashboard-documentation.md"
+type = "text"
+title = "توثيق لوحة تحكم سبق الذكية - Sabq Dashboard Documentation"
+
+[[outputs]]
+id = "K8R6-YE6qlN-sCTLov7pV"
+uri = "file://sabq-ios-api-reference.md"
+type = "text"
+title = "دليل تطبيق سبق iOS الشامل — API + التصميم"
+
+[[outputs]]
+id = "Ue1Lqhanx6FqvJowdSwTy"
+uri = "file://DATABASE_COST_FORENSIC_REPORT.md"
+type = "text"
+title = "تقرير تحقيق التكلفة - Neon Database Forensic Report"
+
+[[outputs]]
+id = "LYXEm5-I0JUBUDud_J4-2"
+uri = "file://sabq-services-guide.md"
+type = "text"
+title = "دليل خدمات منصة سبق الذكية الشامل"
+
+[[outputs]]
+id = "XmGasVAHlu9PsIWhDPkiN"
+uri = "file://honor_articles_report.docx"
+type = "word_document"
+title = "تقرير أخبار HONOR في سبق - 114 خبر"
+
+[[outputs]]
+id = "mmQwuvf5L9ydxAshuIxcq"
+uri = "file://attached_assets/code-review-analysis.md"
+type = "text"
+title = "تحليل مهني وحيادي للتقرير الأمني"
+
+[[outputs]]
+id = "GjfzaznE-KUwkc_SiZH-X"
+uri = "file://.local/seed-prod-rbac.sql.txt"
+type = "text"
+title = "Seed RBAC for Production (SQL — no BEGIN/COMMIT)"
+
+[[outputs]]
+id = "jKqJ8MByXNp_TdfXb6a5z"
+uri = "file://.local/step1_roles.sql.txt"
+type = "text"
+title = "Step 1 — Roles (fixed)"
+
+[[outputs]]
+id = "Vad4IToGjZN1oK-p6XX3i"
+uri = "file://.local/step2_permissions.sql.txt"
+type = "text"
+title = "Step 2 — Permissions (fixed)"
+
+[[outputs]]
+id = "J0EU5JuLE8EjOkwKzyUuR"
+uri = "file://.local/step3_role_permissions.sql.txt"
+type = "text"
+title = "Step 3 — Role-Permission links (fixed)"
+
+[[outputs]]
+id = "vJE1wnl16c5XEq4JWY3zJ"
+uri = "file://.local/step4_link_admin.sql.txt"
+type = "text"
+title = "Step 4 — Link admin (fixed)"
