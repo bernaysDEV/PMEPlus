@@ -6,7 +6,8 @@ node_modules
 replit.nix
 .quintype-data
 scripts
-attached_assets
+# attached_assets
+attached_assets/screenshots/
 .cache
 .local
 .upm
