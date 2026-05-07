@@ -565,6 +565,29 @@ export class ObjectStorageService {
   }
 
   async getObjectEntityUploadURL(): Promise<string> {
+    const storageProvider = process.env.STORAGE_PROVIDER || 'local';
+
+    if (storageProvider === 's3') {
+      const { getSignedUrl } = await import("@aws-sdk/s3-request-presigner");
+
+      const s3 = new S3Client({
+        region: process.env.AWS_S3_REGION || 'us-east-1',
+        endpoint: process.env.AWS_S3_ENDPOINT,
+        credentials: {
+          accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+          secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
+        },
+        forcePathStyle: true,
+      });
+
+      const objectId = randomUUID();
+      const bucket = process.env.AWS_S3_IMAGES_BUCKET || 'media';
+      const key = `uploads/${objectId}`;
+
+      const command = new PutObjectCommand({ Bucket: bucket, Key: key });
+      return getSignedUrl(s3, command, { expiresIn: 900 });
+    }
+
     const privateObjectDir = this.getPrivateObjectDir();
     if (!privateObjectDir) {
       throw new Error(
